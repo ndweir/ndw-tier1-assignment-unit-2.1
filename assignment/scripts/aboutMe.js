@@ -56,6 +56,11 @@ if (adventurous === true) {
   result = "How about we stay home?"
 }
 
+
+
+
+
+
 //console.log(result);
 
 // 13 - Create a variable called `diceRoll` and set it to the value of "Try again later.".
@@ -91,7 +96,7 @@ if (pets < allowedPets) {
   petStatus = "Oh no, I have too many pets!";
 }
 
-console.log(petStatus);
+//console.log(petStatus);
 // STRETCH GOALS:
 
 // 15 - Make a variable called `mostPets` and a conditional that
@@ -99,6 +104,22 @@ console.log(petStatus);
 //      assigns the highest value to `mostPets`. There's several possibilities --
 //      be sure to think through all the scenarios. 
 //      console.log `mostPets` after the conditional has run.
+
+//method 1
+// let mostPets;
+// if (pets > friendsPets) {
+//   mostPets = pets;
+// } else if (pets < friendsPets) {
+//   mostPets = friendsPets;
+// } else {
+//   mostPets = pets;
+// }
+
+//method 2
+let mostPets = pets;
+pets > friendsPets ? mostPets = pets : mostPets = friendsPets
+
+//console.log(mostPets)
 
 // 16 - Make a variable called `luckyResult`
 //      Write a *switch* statement that sets `luckyResult` to:
@@ -109,9 +130,39 @@ console.log(petStatus);
 //      You'll need to research how to use switch statements!
 //      console.log `luckyResult` after the conditional has run.
 
+let luckyResult;
+
+// if (luckyNumber === 1) {
+//   luckyResult = "First is the worst"
+// } else if (luckyNumber === 2) {
+//   luckyResult = "Second is the best"
+// } else if (luckyNumber === 3) {
+//   luckyResult = "Third is the one with the polka dot dress"
+// } else {
+//   luckyResult = "Luck is what happens when preparation meets opportunity"
+// }
+
+// luckyNumber = 1;
+// luckyNumber = 2;
+// luckyNumber = 3;
+
+
+switch (luckyNumber) {
+  case 1: luckyResult = "First is the worst";
+  break;
+  case 2: luckyResult = "Second is the best";
+  break;
+  case 3: luckyResult = "Third is the one with the polka dot dress";
+  break;
+  default : luckyResult = "Luck is what happens when preparation meets opportunity"
+}
+
+console.log(luckyNumber)
+console.log(luckyResult)
+
 // 17 -- Rewrite question 12 with a `ternary` operator. You'll need to do research!
 
-
+adventurous === true ? result = "Adventures are great!" : result = "How about we stay home?";
 
 
 
